@@ -8,7 +8,7 @@ Modelo de classificação para sinalizar escolas com risco de abandono escolar n
 
 Prever o risco de abandono escolar das escolas brasileiras a partir de características observadas no Censo Escolar de 2025, tratando o problema como uma **classificação binária**: a escola teve (ou não) uma taxa de abandono relevante no Ensino Fundamental.
 
-A ideia inicial era tratar o abandono como uma taxa contínua (regressão), mas o problema foi reformulado como classificação binária, já que a distribuição da taxa é fortemente concentrada em 0% e o objetivo prático é sinalizar risco — não estimar o percentual exato.
+A ideia inicial era tratar o abandono como uma taxa contínua (regressão), mas o problema foi reformulado como classificação binária, já que a distribuição da taxa é fortemente concentrada em 0% e o objetivo prático é sinalizar risco, não estimar o percentual exato.
 
 ---
 
