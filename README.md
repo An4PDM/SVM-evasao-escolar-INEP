@@ -29,9 +29,9 @@ y = 0  →  taxa de abandono ≤ 2%
 y = 1  →  taxa de abandono > 2%
 ```
 
-Taxas muito baixas (1 ou 2 alunos isolados) podem refletir casos pontuais ou pequenas imprecisões de registro, não necessariamente um padrão relevante de evasão — por isso o limiar de 2%, em vez de qualquer valor acima de 0%.
+Taxas muito baixas (1 ou 2 alunos isolados) podem refletir casos pontuais ou pequenas imprecisões de registro, não necessariamente um padrão relevante de evasão, por isso o limiar de 2%, em vez de qualquer valor acima de 0%.
 
-Com esse critério, a classe positiva (houve abandono relevante) representa **~7%** dos dados — um cenário fortemente desbalanceado.
+Com esse critério, a classe positiva (houve abandono relevante) representa **~7%** dos dados, um cenário fortemente desbalanceado.
 
 ---
 
@@ -75,7 +75,7 @@ Todas as variáveis são categóricas e foram transformadas via **One-Hot Encodi
 | Baseline (Dummy) | 0.93 | 0.00 | — |
 | SVM final (C=0.01) | 0.61 | 0.79 | 0.13 |
 
-**Por que o modelo com menor acurácia é o melhor aqui:** o baseline só acerta tanto porque a maioria das escolas realmente não tem abandono relevante — mas ele nunca identifica nenhum caso de risco. O SVM sacrifica acurácia geral para identificar 79% das escolas com abandono relevante, o que é o objetivo real do projeto: **triagem de risco**, não acurácia bruta.
+**Por que o modelo com menor acurácia é o melhor aqui:** o baseline só acerta tanto porque a maioria das escolas realmente não tem abandono relevante, mas ele nunca identifica nenhum caso de risco. O SVM sacrifica acurácia geral para identificar 79% das escolas com abandono relevante, o que é o objetivo real do projeto: **triagem de risco**, não acurácia bruta.
 
 O trade-off é a baixa precisão (13%), bastante falso positivo. Em um cenário de triagem, isso é aceitável: o custo de investigar uma escola que acaba não estando em risco tende a ser menor do que deixar uma escola em risco real passar despercebida.
 
